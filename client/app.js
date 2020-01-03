@@ -26,6 +26,7 @@ myApp.config(function($routeProvider){
 		controller:'BooksController',
 		templateUrl: 'views/edit_book.html'
 	})
+	//////////////////////////////////////
 	.when('/genres', {
 		controller:'GenresController',
 		templateUrl: 'views/genres.html'
@@ -37,30 +38,22 @@ myApp.config(function($routeProvider){
 	.when('/genres/add',{
 		controller:'GenresController',
 		templateUrl: 'views/add_genre.html'
-	})	
+	})
+	///////////////////////////////////////////
+	.when('/todos', {
+		controller:'TodosController',
+		templateUrl: 'views/todos.html'
+	})
+	.when('/todos/edit/:id',{
+		controller:'TodosController',
+		templateUrl: 'views/edit_todo.html'
+	})
+	.when('/todos/add',{
+		controller:'TodosController',
+		templateUrl: 'views/add_todo.html'
+	})
+	/////////////////////////////////////////////		
 	.otherwise({
 		redirectTo: '/'
 	});
 });
-
-// myApp.config(function($route2Provider){
-// 	$route2Provider.when('/', {
-// 		controller:'GenresController',
-// 		templateUrl: 'views/genres.html'
-// 	})	
-// 	.when('/genres', {
-// 		controller:'GenresController',
-// 		templateUrl: 'views/genres.html'
-// 	})
-// 	.when('/genres/edit/:id',{
-// 		controller:'GenresController',
-// 		templateUrl: 'views/edit_genre.html'
-// 	})
-// 	.when('/genres/add',{
-// 		controller:'GenresController',
-// 		templateUrl: 'views/add_genre.html'
-// 	})	
-// 	.otherwise({
-// 		redirectTo: '/'
-// 	});
-// });
